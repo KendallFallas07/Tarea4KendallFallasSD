@@ -1,0 +1,39 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173
+  port = 8888
+
+[[redirects]]
+  from = "/book/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/book"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/author/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/author"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/publisher/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/publisher"
+  to = "/index.html"
+  status = 200
